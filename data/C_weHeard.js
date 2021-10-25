@@ -5,6 +5,7 @@ var coquitlamData = {
       "type": "Feature",
       "id": "1",
       "properties": {
+        "key": "C",
         "city": "Coquitlam",
         "type": "Suggestion",
         "location": "Coquitlam, Guildford Way, 3096",
@@ -23,6 +24,7 @@ var coquitlamData = {
       "type": "Feature",
       "id": "2",
       "properties": {
+        "key": "C",
         "city": "Coquitlam",
         "type": "Suggestion",
         "location": "Coquitlam, Mary Hill By-pass",
@@ -32,8 +34,8 @@ var coquitlamData = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.811500,
-          49.225272
+          -122.796032,
+          49.227195
         ]
       }
     }

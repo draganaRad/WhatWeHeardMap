@@ -263,12 +263,30 @@ function createLayer(data, style, iconColor, markerColor) {
 function onEachFeature(feature, layer) {
   var popupContent = ""
   if (feature.properties) {
-    // for this mobile version don't show link and id
-    // if (feature.properties.id) {
-    //   popupContent +='<b><a href="https://www.openstreetmap.org/' + feature.properties.id + '" target="_blank">' + feature.properties.id + '</a></b><hr>'
-    //   //popupContent += "<b>Id: </b>";
-    //   //popupContent += feature.properties.id;
-    // }
+      // add type
+      if (feature.properties.type) {
+          popupContent += "<b>Type: </b>";
+          popupContent += feature.properties.type;
+      }
+
+      // add location
+      if (feature.properties.location) {
+          popupContent += "<br><b>Location: </b>";
+          popupContent += feature.properties.location;
+      }
+      // add description
+      if (feature.properties.description) {
+          popupContent += "<br><b>Description: </b>";
+          popupContent += feature.properties.description;
+      }
+      // add photo(s)
+      // remove white spaces in city if exist. no white spaces in photo names
+      if (feature.properties.photo) {
+          //console.log(city)
+          popupContent += "<br><br>"
+          imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photo
+          popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>"
+      }
 
     // for debug
     // if (feature.properties.id == 'way/35198494'){
@@ -279,18 +297,9 @@ function onEachFeature(feature, layer) {
     // popupContent += "<br>=================";
     //   for (let property in feature.properties) {
     //       //console.log('Dragana:: tag ' + JSON.stringify(tag) +', value: '+ way.tags[tag])
-    //     //if ((property != "id") && (property != "decisionMsg") && (property != "access")
-    //     //  (property != "highway") && (feature.properties[property] != null)){
-
     //         popupContent += "<br><b>" + property + ": </b>";
     //       popupContent += feature.properties[property];
-    //     //}
     //  }
-    // for this mobile version don't show decision message
-    // if (feature.properties.decisionMsg) {
-    //   popupContent += "<br><br><b>Decision Msg: </b>";
-    //   popupContent += feature.properties.decisionMsg;
-    // }
   }
   layer.bindPopup(popupContent);
 }
