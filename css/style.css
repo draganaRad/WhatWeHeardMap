@@ -5,6 +5,7 @@ html, body, div, span, fieldset, form, label {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    /* https://www.gitmemory.com/issue/Leaflet/Leaflet/7394/752966368 */
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
     user-select: none;
@@ -17,6 +18,15 @@ html {
   *, *::before, *::after {
     box-sizing: inherit;
   }
+
+/* circle for legend */
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-top: 3px;
+    display: inline-block;
+}
 
 .pin-topright {
     position: absolute;
@@ -181,4 +191,41 @@ html {
     /* this is temp fix. background-color shouldn't be here */
     background-color: rgba(0, 0, 0, .5);
     /* background-color: rgba(214, 11, 129, 1); */
+}
+
+/* marker clusters */
+.marker-pmcluster {
+    background-color: rgba(145, 205, 255, 0.6);
+}
+
+.marker-pmcluster div {
+    background-color: rgba(45, 105, 155, 0.6);
+}
+
+.marker-coqcluster {
+    background-color: rgba(186, 159, 204, 0.6);
+}
+
+.marker-coqcluster div {
+    background-color: rgba(86, 59, 104, 0.6);
+}
+
+.marker-pccluster {
+    background-color: rgba(235, 242, 157, 0.6);
+}
+
+.marker-pccluster div {
+    background-color: rgba(135, 142, 57, 0.6);
+}
+
+.marker-bacluster {
+    background-color: rgba(181, 207, 222, 0.6);
+}
+
+.marker-bacluster div {
+    background-color: rgba(81, 107, 122, 0.6);
+}
+
+.marker-cluster div {
+    color: white;
 }
