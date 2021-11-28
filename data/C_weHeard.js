@@ -3,7 +3,7 @@ var coquitlamData = {
   "features": [
     {
       "type": "Feature",
-      "id": "1",
+      "id": "C_1",
       "properties": {
         "key": "C",
         "city": "Coquitlam",
@@ -23,7 +23,7 @@ var coquitlamData = {
     },
     {
       "type": "Feature",
-      "id": "2",
+      "id": "C_2",
       "properties": {
         "key": "C",
         "city": "Coquitlam",

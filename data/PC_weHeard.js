@@ -3,7 +3,7 @@ var poCoData = {
   "features": [
     {
       "type": "Feature",
-      "id": "1",
+      "id": "PC_1",
       "properties": {
         "key": "PC",
         "city": "Port Coquitlam",
@@ -22,7 +22,7 @@ var poCoData = {
     },
     {
       "type": "Feature",
-      "id": "2",
+      "id": "PC_2",
       "properties": {
         "key": "PC",
         "city": "Port Coquitlam",
