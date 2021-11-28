@@ -10,7 +10,8 @@ var coquitlamData = {
         "type": "Suggestion",
         "location": "Coquitlam, Guildford Way, 3096",
         "description": "I ride along Guildford Way a lot. I find cars use the bike lane to turn right. It would be great to have pylons on to separate bike lane from cars at the intersections. This would be at every intersection from pipeline to Ioco",
-        "photo": ""
+        "photo": "",
+        "date":"2021-09-13"
       },
       "geometry": {
         "type": "Point",
@@ -29,7 +30,8 @@ var coquitlamData = {
         "type": "Suggestion",
         "location": "Coquitlam, Mary Hill By-pass",
         "description": "Can’t ride trail from Shaughnessy and Mary hill bypass, to United blvd because plants so overground. Please trim. New asphalt also requested as Route almost unrideable due to damage from tree roots.",
-        "photo": ""
+        "photo": "",
+        "date":"2021-06-15"
       },
       "geometry": {
         "type": "Point",

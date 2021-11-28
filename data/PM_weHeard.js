@@ -3,14 +3,15 @@ var portMoodyData = {
     "features": [
         {
             "type": "Feature",
-            "id": "1",
+            "id": "PM_1",
             "properties": {
                 "key": "PM",
                 "city": "Port Moody",
                 "type": "Like",
                 "location": "Port Moody, Moody St, 84A",
                 "description": "Much easier to get to sky train. Thank you!",
-                "photo": "1.png"
+                "photo": "1.png",
+                "date":"2020-02-04"
             },
             "geometry": {
                 "type": "Point",
@@ -22,14 +23,15 @@ var portMoodyData = {
         },
         {
             "type": "Feature",
-            "id": "2",
+            "id": "PM_2",
             "properties": {
                 "key": "PM",
                 "city": "Port Moody",
                 "type": "Problem",
                 "location": "Port Moody, Clarke St, 2039",
                 "description": "I’m scared to cross here. Please fix.",
-                "photo": "2.png"
+                "photo": "2.png",
+                "date":"2020-02-09"
             },
             "geometry": {
                 "type": "Point",
@@ -41,14 +43,15 @@ var portMoodyData = {
         },
         {
             "type": "Feature",
-            "id": "3",
+            "id": "PM_3",
             "properties": {
                 "key": "PM",
                 "city": "Port Moody",
                 "type": "Suggestion",
                 "location": "Port Moody, Garrow Dr, 665",
                 "description": "Please add bike route signage here.",
-                "photo": "3.png"
+                "photo": "3.png",
+                "date":"2021-10-07"
             },
             "geometry": {
                 "type": "Point",
@@ -60,14 +63,15 @@ var portMoodyData = {
         },
         {
             "type": "Feature",
-            "id": "4",
+            "id": "PM_4",
             "properties": {
                 "key": "PM",
                 "city": "Port Moody",
                 "type": "Problem",
                 "location": "Port Moody, Glenayre Dr, 1206",
                 "description": "Please add curb cut to get onto the sidewalk which is a bike route here.",
-                "photo": "4.png"
+                "photo": "4.png",
+                "date":"2020-02-09"
             },
             "geometry": {
                 "type": "Point",

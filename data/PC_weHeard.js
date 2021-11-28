@@ -9,7 +9,8 @@ var poCoData = {
         "city": "Port Coquitlam",
         "type": "Problem",
         "location": "From Port Coquitlam to New West",
-        "description": "Connection between Port Coquitlam and New Westminster really requires improvement."
+        "description": "Connection between Port Coquitlam and New Westminster really requires improvement.",
+        "date":"2021-09-04"
       },
       "geometry": {
         "type": "Point",
@@ -27,7 +28,8 @@ var poCoData = {
         "city": "Port Coquitlam",
         "type": "Problem",
         "location": "East to West along Kingsway",
-        "description": "My concern is the east west route along Kingsway. Ample room for a new bike path in the Hydro ROW."
+        "description": "My concern is the east west route along Kingsway. Ample room for a new bike path in the Hydro ROW.",
+        "date":"2021-09-03"
       },
       "geometry": {
         "type": "Point",

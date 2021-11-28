@@ -250,8 +250,22 @@ function createLayer(data, style, iconColor, markerColor) {
     style: style,
     onEachFeature: onEachFeature,
     pointToLayer: function (feature, latlng) {
+      var iconName = 'circle';
+      // change icon if fixed
+      switch (feature.properties.type) {
+          case 'Suggestion': 
+          iconName = 'comment-dots';
+          break;
+          case 'Problem': 
+          iconName = 'exclamation';
+          break;
+          case 'Like': 
+          iconName = 'thumbs-up';
+          break;
+      }
+      //console.log('Dragana:: '+feature.properties.type+ ' icon name:'+ iconName);
       return L.marker(latlng, {
-        icon: createIconMarker('circle', iconColor, markerColor)
+        icon: createIconMarker(iconName, iconColor, markerColor)
       });
     }
   });
@@ -278,6 +292,17 @@ function onEachFeature(feature, layer) {
       if (feature.properties.description) {
           popupContent += "<br><b>Description: </b>";
           popupContent += feature.properties.description;
+      }
+      // add date
+      if (feature.properties.date) {
+        popupContent += "<br><b>Date: </b>";
+        dateProperty = feature.properties.date;
+        var parts = dateProperty.split('-');
+        // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
+        // January - 0, February - 1, etc.
+        var dateStr = new Date(parts[0], parts[1] - 1, parts[2]); 
+        //console.log(dateStr.toDateString());
+        popupContent += dateStr.toDateString()
       }
       // add photo(s)
       // remove white spaces in city if exist. no white spaces in photo names
