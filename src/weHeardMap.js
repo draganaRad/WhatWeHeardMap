@@ -86,7 +86,7 @@ L.tileLayer(
 }
 ).addTo(map);
 // Add Tri-Cities HUB Committee attribution
-map.attributionControl.addAttribution('<a href="http://wiki.bikehub.ca/committees/index.php?title=Tri-Cities_Committee_Wiki">*Tri-Cities HUB Committee</a>');
+map.attributionControl.addAttribution('<a href="https://bikehub.ca/tri-cities">*Tri-Cities HUB Committee</a>');
 
 // add geolocation on mobile
 if (L.Browser.mobile) {
