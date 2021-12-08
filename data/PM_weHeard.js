@@ -80,6 +80,26 @@ var portMoodyData = {
                     49.2789068
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "id": "PM_5",
+            "properties": {
+                "key": "PM",
+                "city": "Port Moody",
+                "type": "Problem",
+                "location": "Barnet and Lougheed to the Golden Ears Bridge",
+                "description": "I took a ride down Barnet and Lougheed to the Golden Ears Bridge and back again. The state of the bike lane was horrible to say the least, with debris all over the place the entire length of my ride. I was astonished that I didn't get a flat tire on my ride. It was so off putting that I actually never rode down there again and for most of Summer didn't ride much as I felt like I didn't have anywhere bike friendly to ride.",
+                "photo": "",
+                "date":"2021-11-30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.825795,
+                    49.277584
+                ]
+            }
         }
     ]
 }
