@@ -50,19 +50,19 @@ var belAnStyle = {
 const layerSettings = [
   {
     color: portMoodyLegendColor, key: 'PM', title: 'Port Moody', checked: true, clusterStyle: 'pmcluster',
-    data: portMoodyData, style: portMoodyStyle, iconColor: portMoodyIconColor, iconLight: portMoodyIconLight
+    data: portMoodyData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/PM_weHeard.geojson', style: portMoodyStyle, iconColor: portMoodyIconColor, iconLight: portMoodyIconLight
   },
   {
     color: coquitlamLegendColor, key: 'C', title: 'Coquitlam', checked: true, clusterStyle: 'coqcluster',
-    data: coquitlamData, style: coquitlamStyle, iconColor: coquitlamIconColor, iconLight: coquitlamIconLight
+    data: coquitlamData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/C_weHeard.geojson', style: coquitlamStyle, iconColor: coquitlamIconColor, iconLight: coquitlamIconLight
   },
   {
     color: portCoqLegendColor, key: 'PC', title: 'Port Coquitlam', checked: true, clusterStyle: 'pccluster',
-    data: poCoData, style: portCoqStyle, iconColor: portCoqIconColor, iconLight: portCoqIconLight
+    data: poCoData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/PC_weHeard.geojson', style: portCoqStyle, iconColor: portCoqIconColor, iconLight: portCoqIconLight
   },
   {
     color: belAnLegendColor, key: 'BA', title: 'Belcarra/Anmore', checked: true, clusterStyle: 'bacluster',
-    data: belAnData, style: belAnStyle, iconColor: belAnIconColor, iconLight: belAnIconLight
+    data: belAnData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/BA_weHeard.geojson', style: belAnStyle, iconColor: belAnIconColor, iconLight: belAnIconLight
   }]
 
 var layerGroup = new L.LayerGroup();
@@ -199,24 +199,20 @@ function toggleLayer(checkbox) {
 
 // ------ Layers
 function addLayers() {
-  layerGroup.addTo(map);
 
-  // var portMoodyMarkers = createClusterGroup('pmcluster')  //style name is defined in quickFix.css
-  // //portMoodyLayer = createLayer('data/PM_weHeard.json', portMoodyStyle, portMoodyIconColor, portMoodyIconLight)
-  // portMoodyLayer = createLayer(portMoodyData, portMoodyStyle, portMoodyIconColor, portMoodyIconLight)
-  // //map.addLayer(portMoodyLayer);
-  // portMoodyMarkers.addLayer(portMoodyLayer);
-  // layers['PM'] = portMoodyMarkers
-  // //map.addLayer(portMoodyMarkers);
-  // layerGroup.addLayer(portMoodyMarkers)
+  //createLayer('https://draganarad.github.io/TriCityData/weHeard/C_weHeard.geojson', coquitlamStyle, coquitlamIconColor, coquitlamIconLight)
+  // var coquitlamCluster = createClusterGroup('coqcluster')
+  // coquitlamLayer.on('data:loaded', function() { 
+  //   coquitlamCluster.addLayer(coquitlamLayer);
+  //   layers['C'] = coquitlamCluster
+  //   layerGroup.addLayer(coquitlamCluster)
+  // })
 
   for (let setting of layerSettings) {
-    var clusterGroup = createClusterGroup(setting.clusterStyle)
-    cityLayer = createLayer(setting.data, setting.style, setting.iconColor, setting.iconLight)
-    clusterGroup.addLayer(cityLayer);
-    layers[setting.key] = clusterGroup
-    layerGroup.addLayer(clusterGroup)
+    createLayer(setting.dataUrl, setting.style, setting.iconColor, setting.iconLight, setting.clusterStyle, setting.key)
   }
+
+  layerGroup.addTo(map);
 }
 
 function createClusterGroup(clusterStyle) {
@@ -244,9 +240,10 @@ function createIconMarker(iconName, iconColor, markerColor) {
   return newIconMarker
 }
 
-function createLayer(data, style, iconColor, markerColor) {
-  //var cityLayer = new L.GeoJSON.AJAX(dataUrl, { // doesn't work. Don't know why
-  var cityLayer = new L.geoJSON(data, {
+function createLayer(dataUrl, style, iconColor, markerColor, clusterStyle, layerKey) {
+  // create layer
+  var cityLayer = new L.GeoJSON.AJAX(dataUrl, { 
+  //var cityLayer = new L.geoJSON(data, { // leaving for test. in case ajax doesn't work
     style: style,
     onEachFeature: onEachFeature,
     pointToLayer: function (feature, latlng) {
@@ -268,8 +265,15 @@ function createLayer(data, style, iconColor, markerColor) {
         icon: createIconMarker(iconName, iconColor, markerColor)
       });
     }
-  });
-  return cityLayer
+    });
+    
+    // create cluster and add to global layerGroup
+    var cityCluster = createClusterGroup(clusterStyle)
+    cityLayer.on('data:loaded', function() { 
+      cityCluster.addLayer(cityLayer);
+      layers[layerKey] = cityCluster
+      layerGroup.addLayer(cityCluster)
+    })
 }
 
 // =========================================
