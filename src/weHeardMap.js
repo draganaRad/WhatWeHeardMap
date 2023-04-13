@@ -306,15 +306,27 @@ function onEachFeature(feature, layer) {
         // January - 0, February - 1, etc.
         var dateStr = new Date(parts[0], parts[1] - 1, parts[2]); 
         //console.log(dateStr.toDateString());
-        popupContent += dateStr.toDateString()
+        popupContent += dateStr.toDateString();
       }
       // add photo(s)
       // remove white spaces in city if exist. no white spaces in photo names
       if (feature.properties.photo) {
           //console.log(city)
-          popupContent += "<br><br>"
-          imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photo
-          popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>"
+          popupContent += "<br><br>";
+          imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photo;
+          popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>";
+      }
+
+      // add if there's update
+      if (feature.properties.descriptionUpdate) {
+        popupContent += "<br>";
+        popupContent += "<br><b>Update: </b>";
+        popupContent += feature.properties.descriptionUpdate;
+      }
+      if (feature.properties.photoUpdate) {
+        popupContent += "<br>";
+        imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photoUpdate;
+        popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>";
       }
 
     // for debug
