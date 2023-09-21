@@ -1,4 +1,4 @@
-var portMoodyData = {
+{
     "type": "FeatureCollection",
     "features": [
         {
@@ -98,6 +98,26 @@ var portMoodyData = {
                 "coordinates": [
                     -122.825795,
                     49.277584
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "PM_6",
+            "properties": {
+                "key": "PM",
+                "city": "Port Moody",
+                "type": "Suggestion",
+                "location": "Port Moody, 100 Klahanie Dr",
+                "description": "there's a tree root that's sticking up under the bike path near Klanair/Electronic Avenue.  is there a way to pave over it or add a speed bump of some sort to smooth it out?\nI've hit it hard on my bike and had a friend who wiped out because of it.",
+                "photo": "6.jpg",
+                "date":"2023-08-01"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.8386284,
+                    49.2790451
                 ]
             }
         }

@@ -1,0 +1,119 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "PC_1",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Problem",
+        "location": "From Port Coquitlam to New West",
+        "description": "Connection between Port Coquitlam and New Westminster really requires improvement.",
+        "date":"2021-09-04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.748646,
+          49.246313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_2",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Problem",
+        "location": "East to West along Kingsway",
+        "description": "My concern is the east west route along Kingsway. Ample room for a new bike path in the Hydro ROW.",
+        "date":"2021-09-03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.749503,
+          49.247329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_3",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Problem",
+        "location": "Gates Park",
+        "description": "It should be mandatory that all bicycles adult or child should have some sort of bell on the front of the bicycle to let people know that someone is coming up from the back.",
+        "date":"2021-11-30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.791421,
+          49.259188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_4",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Problem",
+        "location": "Lions Park",
+        "description": "It should be mandatory that all bicycles adult or child should have some sort of bell on the front of the bicycle to let people know that someone is coming up from the back.",
+        "date":"2021-11-30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.779912,
+          49.266960
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_5",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Like",
+        "location": "2244 Welcher Ave, Port Coquitlam",
+        "description": "Donald Street Greenway does not get enough praise. Great reuse of existing surplus road space! More network connections needed though both at south end next to elementary school and north end into downtown.",
+        "date":"2022-08-23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.780539,
+          49.257573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_6",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Problem",
+        "location": "22 Elgin Ave, Port Coquitlam",
+        "description": "There are few bike racks. Sometimes I ride my bike to places to shop or eat or be Mary.<br>What's the point of a rackless bike district?",
+        "date":"2023-09-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.77810,
+          49.262607
+        ]
+      }
+    }
+  ]
+}

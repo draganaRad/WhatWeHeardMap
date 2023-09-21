@@ -50,19 +50,19 @@ var belAnStyle = {
 const layerSettings = [
   {
     color: portMoodyLegendColor, key: 'PM', title: 'Port Moody', checked: true, clusterStyle: 'pmcluster',
-    data: portMoodyData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/PM_weHeard.geojson', style: portMoodyStyle, iconColor: portMoodyIconColor, iconLight: portMoodyIconLight
+    data: "", dataUrl: 'data/PM_weHeard.geojson', style: portMoodyStyle, iconColor: portMoodyIconColor, iconLight: portMoodyIconLight
   },
   {
     color: coquitlamLegendColor, key: 'C', title: 'Coquitlam', checked: true, clusterStyle: 'coqcluster',
-    data: coquitlamData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/C_weHeard.geojson', style: coquitlamStyle, iconColor: coquitlamIconColor, iconLight: coquitlamIconLight
+    data: "", dataUrl: 'data/C_weHeard.geojson', style: coquitlamStyle, iconColor: coquitlamIconColor, iconLight: coquitlamIconLight
   },
   {
     color: portCoqLegendColor, key: 'PC', title: 'Port Coquitlam', checked: true, clusterStyle: 'pccluster',
-    data: poCoData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/PC_weHeard.geojson', style: portCoqStyle, iconColor: portCoqIconColor, iconLight: portCoqIconLight
+    data: "", dataUrl: 'data/PC_weHeard.geojson', style: portCoqStyle, iconColor: portCoqIconColor, iconLight: portCoqIconLight
   },
   {
     color: belAnLegendColor, key: 'BA', title: 'Belcarra/Anmore', checked: true, clusterStyle: 'bacluster',
-    data: belAnData, dataUrl: 'https://draganarad.github.io/TriCityData/weHeard/BA_weHeard.geojson', style: belAnStyle, iconColor: belAnIconColor, iconLight: belAnIconLight
+    data: "", dataUrl: 'data/BA_weHeard.geojson', style: belAnStyle, iconColor: belAnIconColor, iconLight: belAnIconLight
   }]
 
 var layerGroup = new L.LayerGroup();
@@ -242,8 +242,8 @@ function createIconMarker(iconName, iconColor, markerColor) {
 
 function createLayer(dataUrl, style, iconColor, markerColor, clusterStyle, layerKey) {
   // create layer
-  var cityLayer = new L.GeoJSON.AJAX(dataUrl, { 
-  //var cityLayer = new L.geoJSON(data, { // leaving for test. in case ajax doesn't work
+  //var cityLayer = new L.GeoJSON.AJAX(dataUrl, { //leaving here in case I want to try moving data to common repository again (see "TriCityData")
+  var cityLayer = new L.geoJSON.ajax(dataUrl, {
     style: style,
     onEachFeature: onEachFeature,
     pointToLayer: function (feature, latlng) {

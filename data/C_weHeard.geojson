@@ -1,4 +1,4 @@
-var coquitlamData = {
+{
   "type": "FeatureCollection",
   "features": [
     {
@@ -58,6 +58,45 @@ var coquitlamData = {
         "coordinates": [
           -122.798552,
           49.276522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "C_4",
+      "properties": {
+        "key": "C",
+        "city": "Coquitlam",
+        "type": "Suggestion",
+        "location": "Coquitlam, Trevor Wingrove Way and Pinetree Way along the MUP heading south",
+        "description": "The traffic signal support exactly lines up with the curb drop. This makes riding a bicycle tricky and also wheelchair access very difficult I would think.",
+        "photo": "1.png",
+        "date":"2022-11-09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.789558,
+          49.290849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "C_5",
+      "properties": {
+        "key": "C",
+        "city": "Coquitlam",
+        "type": "Problem",
+        "location": "1161 The High St #2, Coquitlam",
+        "description": "There are few bike racks in this area. it's difficult to store my bike while I visit the local merchants.<br>This area is adjacent to the Glen Drive bike route.",
+        "date":"2023-09-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7960323,
+          49.2823872
         ]
       }
     }
