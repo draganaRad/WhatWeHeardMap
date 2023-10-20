@@ -114,6 +114,25 @@
           49.262607
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "PC_7",
+      "properties": {
+        "key": "PC",
+        "city": "Port Coquitlam",
+        "type": "Like",
+        "location": "bridge over Coquitlam river",
+        "description": "Great trails in POCO!",
+        "date":"2023-09-27"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.776336,
+          49.276651
+        ]
+      }
     }
   ]
 }

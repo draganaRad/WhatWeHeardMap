@@ -316,6 +316,13 @@ function onEachFeature(feature, layer) {
           imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photo;
           popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>";
       }
+      // add second photo if exist
+      if (feature.properties.photo1) {
+        //console.log(city)
+        popupContent += "<br><br>";
+        imageSrc = "img/" + feature.properties.key + "/" + feature.properties.photo1;
+        popupContent += "<a href='" + imageSrc + "' target='_blank'><img src='" + imageSrc + "' width='148' height='100'></img></a>";
+    }
 
       // add if there's update
       if (feature.properties.descriptionUpdate) {

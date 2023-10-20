@@ -107,7 +107,7 @@
             "properties": {
                 "key": "PM",
                 "city": "Port Moody",
-                "type": "Suggestion",
+                "type": "Problem",
                 "location": "Port Moody, 100 Klahanie Dr",
                 "description": "there's a tree root that's sticking up under the bike path near Klanair/Electronic Avenue.  is there a way to pave over it or add a speed bump of some sort to smooth it out?\nI've hit it hard on my bike and had a friend who wiped out because of it.",
                 "photo": "6.jpg",
@@ -118,6 +118,27 @@
                 "coordinates": [
                     -122.8386284,
                     49.2790451
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "PM_7",
+            "properties": {
+                "key": "PM",
+                "city": "Port Moody",
+                "type": "Problem",
+                "location": "Port Moody, Ioco Rd, 221",
+                "description": "There is not enough safe bike parking at Heritage mountain shopping area, when I want to run errands and go to medical appointments. I literally have nowhere to lock my bike or escooter. The only rack at IGA is compromised -> it is not attached to the ground <- screws missing and standing on a brick",
+                "photo": "7.png",
+                "photo1": "7_1.jpeg",
+                "date":"2023-10-11"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.827210,
+                    49.283402
                 ]
             }
         }
