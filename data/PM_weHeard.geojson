@@ -141,6 +141,26 @@
                     49.283402
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "id": "PM_8",
+            "properties": {
+                "key": "PM",
+                "city": "Port Moody",
+                "type": "Suggestion",
+                "location": "2771 Clarke St, Port Moody",
+                "description": "It would be nice if the bike lane accommodated southbound travel Moody St to westbound on clark",
+                "photo": "",
+                "date":"2023-11-05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.850208,
+                    49.277752
+                ]
+            }
         }
     ]
 }

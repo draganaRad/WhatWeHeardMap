@@ -23,26 +23,6 @@
     },
     {
       "type": "Feature",
-      "id": "C_2",
-      "properties": {
-        "key": "C",
-        "city": "Coquitlam",
-        "type": "Suggestion",
-        "location": "Coquitlam, Mary Hill By-pass",
-        "description": "Can’t ride trail from Shaughnessy and Mary hill bypass, to United blvd because plants so overground. Please trim. New asphalt also requested as Route almost unrideable due to damage from tree roots.",
-        "photo": "",
-        "date":"2021-06-15"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.796032,
-          49.227195
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "C_3",
       "properties": {
         "key": "C",
