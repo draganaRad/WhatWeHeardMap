@@ -79,6 +79,25 @@
           49.2823872
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "C_6",
+      "properties": {
+        "key": "C",
+        "city": "Coquitlam",
+        "type": "Problem",
+        "location": "Coquitlam, Riverview to southwest end of United Blvd",
+        "description": "A safe/r option from end of riverview/ colony farm to bike routes on southwest end of united blvd. Going over the Mary Hill bypass or using United Blvd is a bit scary.",
+        "date":"2024-09-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.813984,
+          49.240803
+        ]
+      }
     }
   ]
 }
