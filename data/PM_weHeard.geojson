@@ -161,6 +161,26 @@
                     49.277752
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "id": "PM_9",
+            "properties": {
+                "key": "PM",
+                "city": "Port Moody",
+                "type": "Suggestion",
+                "location": "Port Moody, Knowle St, 300",
+                "description": "Parking my bike and escooter at the PoMo rec centre is very hard. The only bike locking stands that are in safe spot in front are rusted through and have missing screws. Finding better spot is next to impossible.",
+                "photo": "9.png",
+                "date":"2025-05-02"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.830902,
+                    49.283218
+                ]
+            }
         }
     ]
 }
